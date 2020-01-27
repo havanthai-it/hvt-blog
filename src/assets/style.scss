@@ -1,0 +1,112 @@
+@import './global.scss';
+
+/* ==========COMMON========== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========TEXT-COLOR========== */
+.text-primary {
+  color: $color-primary;
+}
+
+/* ==========TEXT-POSITION========== */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ==========TEXT-SIZE========== */
+.text-xs {
+  font-size: $text-xs;
+}
+
+.text-sm {
+  font-size: $text-sm;
+}
+
+.text-lg {
+  font-size: $text-lg;
+}
+
+.text-xl {
+  font-size: $text-xl;
+}
+
+.text-xxl {
+  font-size: $text-xxl;
+}
+
+.text-xxxl {
+  font-size: $text-xxxl;
+}
+
+/* ==========SCROLL-ANIMATIONS========== */
+.scroll-reach-threshold {
+  @include desktop {
+    #header {
+      position: fixed;
+      top: 0;
+      z-index: 99;
+      width: 100%;
+      height: 75px;
+      background-color: #fff;
+    }
+  }
+}
+
+.scroll-not-reach-threshold {
+  @include desktop {
+    #header {
+      position: unset;
+      height: 0;
+    }
+  }
+}
+
+/* ==========HEADER-IMAGES========== */
+.header-image {
+  margin-top: 75px;
+  width: 100%;
+  overflow: hidden;
+  height: calc(100vh - 75px);
+}

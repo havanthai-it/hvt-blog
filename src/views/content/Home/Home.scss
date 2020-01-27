@@ -1,0 +1,233 @@
+@import '@/assets/global.scss';
+
+#home {
+  /* ==========OVERLAY========== */
+  .overlay {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .overlay-left,
+  .overlay-right {
+    top: 0;
+    width: 50%;
+    height: 100vh;
+  }
+
+  .overlay-left {
+    left: 0;
+    background-color: $color-bg-primary;
+  }
+
+  .overlay-right {
+    right: 0;
+    background-color: #fff;
+  }
+
+  .overlay-square {
+    top: 65vh;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    transform: rotateZ(45deg);
+    background-color: $color-bg-primary;
+  }
+
+  .section-title {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 3em;
+    color: #000;
+
+    @include tablet {
+      font-size: 2em;
+    }
+  }
+
+  .section-subtitle {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    color: #999;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  /* ==========GREETING-SECTION========== */
+  .greeting-section {
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    padding-top: 30vh;
+    height: 100vh;
+
+    .intro-name {
+      font-size: $text-xxxl;
+    }
+
+    .intro-job {
+      font-size: $text-xl;
+    }
+
+    @include tablet {
+      padding-top: 30vh;
+    }
+  }
+
+  /* ==========ABOUT-SECTION========== */
+
+  .about-section {
+    .profile-image-wrapper {
+      background: url('./../../../assets/images/hvt-profile.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(100vh - 75px);
+    }
+
+    .section-title {
+      margin-bottom: 30px;
+
+      @include tablet {
+        text-align: center;
+        margin-top: 100px;
+      }
+    }
+  }
+
+  /* ==========LOGO-SECTION========== */
+
+  .logo-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 100px 0;
+
+
+    .logo-item {
+      height: 40px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  /* ==========SERVICES-SECTION========== */
+  .services-section {
+    margin: 100px 0;
+
+    .service-card {
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      padding: 30px;
+
+      .card-icon {
+        
+        margin-bottom: 20px;
+
+        img {
+          display: block;
+          margin: auto;
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      .card-title {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 500;
+        color: $color-primary;
+      }
+
+      .card-content {
+        margin-bottom: 10px;
+        color: #333;
+        text-align: center;
+      }
+    }
+    
+  }
+
+  /* ==========BLOG-SECTION========== */
+  .blog-section {
+    margin: 100px 0;
+
+    .blog-card {
+      margin-bottom: 30px;
+      
+      .card-thumbnail {
+        img {
+          display: block;
+          margin: auto;
+          width: 100%;
+          height: auto;  
+        }
+      }
+
+      .card-title {
+        color: #000;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0 10px;
+        margin: 0.5em 0;
+
+        a:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+
+        @include tablet {
+          font-weight: 600;
+        }
+      }
+
+      .card-content {
+        padding: 0px 10px;
+        margin-bottom: 20px;
+      }
+
+      .card-date {
+        padding: 0 10px;
+        color: #666;
+        font-size: 0.85em;
+        font-weight: 500;
+      }
+    }
+  }
+
+  /* ==========CONTACT-SECTION========== */
+  .contact-section {
+    margin: 100px 0;
+
+    .contact-info {
+      .contact-item {
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 20px;
+
+        .fa {
+          position: absolute;
+          top: 0.35em;
+          left: 0;
+          color: $color-primary;
+        }
+      }
+    }
+
+    .contact-form {
+      .form-item {
+        margin-bottom: 20px;
+
+        .btn-submit {
+          background-color: $color-primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+}

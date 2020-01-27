@@ -1,0 +1,55 @@
+@import '@/assets/global.scss';
+
+#post {
+  .header-image {
+    position: relative;
+    background-image: url('./../../../assets/images/header-image-blog.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 400px;
+  }
+
+  .container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    .post {
+      
+      .post-title {
+        font-weight: 600;
+        color: #000;
+        font-size: 1.6em;
+      }
+
+      .post-date {
+        margin-top: 10px;
+        font-size: 0.85em;
+        color: #666;
+      }
+
+      .post-content {
+        margin-top: 30px;
+      }
+    }
+
+    .col-right {
+      .post-card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+
+        .card-thumbnail {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .card-title {
+          font-weight: 600;
+          color: #000;
+        }
+      }
+    }
+  }
+}

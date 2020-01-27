@@ -1,0 +1,36 @@
+@import '@/assets/global.scss';
+
+#footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 40px 0;
+
+  .footer-col-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  .footer-col-content {
+    &>div {
+      margin-bottom: 8px;
+      padding-left: 24px;
+      position: relative;
+
+      a {
+        margin-left: 8px;
+  
+        &:hover {
+          color: inherit;
+        }
+      }
+
+      .fa {
+        position: absolute;
+        left: 0;
+        top: 0.35em;
+      }
+    }
+    
+  }
+}

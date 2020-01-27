@@ -1,32 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div
+    id="app"
+    :class="{
+      'scroll-reach-threshold': scrollReachThreshold,
+      'scroll-not-reach-threshold': !scrollReachThreshold
+    }"
+  >
+    <AppHeader />
     <router-view />
+    <AppFooter />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import AppHeader from '@/views/header/Header.vue';
+import AppFooter from '@/views/footer/Footer.vue';
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: 'app',
+  components: {
+    AppHeader,
+    AppFooter
+  },
+  data: function() {
+    return {
+      scrollReachThreshold: false
+    };
+  },
+  methods: {
+    handleScroll() {
+      const scrolled = window.scrollY;
+      const vh = window.innerHeight;
+      this.scrollReachThreshold = scrolled >= vh - 75;
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+};
+</script>
+<style lang="scss" src="./assets/style.scss"></style>

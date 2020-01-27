@@ -1,0 +1,93 @@
+@import '@/assets/global.scss';
+
+#header {
+  width: 100%;
+  z-index: 99;
+
+  .container {
+    position: relative;
+  }
+
+  // position: fixed;
+  // height: 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+
+  @include desktop {
+    // height: 0px;
+    background-color: #fff;
+  }
+
+  @include tablet {
+    position: fixed;
+    top: 0;
+    height: auto;
+    padding: 25px 0;
+    color: #fff;
+    background-color: #000;
+    font-weight: 400;
+  }
+
+  .nav {
+    @include desktop {
+      -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+      justify-content: space-between !important;
+
+      li {
+        padding: 20px 0;
+
+        a:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    @include tablet {
+      display: block;
+      margin-top: 10px;
+
+      li {
+        display: block;
+        text-align: left;
+        padding: 4px 0;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .menu-wrapper {
+    @include desktop {
+      display: none;
+    }
+
+    @include tablet {
+      position: absolute;
+      right: 15px;
+      text-align: right;
+      cursor: pointer;
+    }
+  }
+
+  .nav-horizontal {
+    @include desktop {
+      display: block;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .nav-vertical {
+    @include desktop {
+      display: none;
+    }
+
+    @include tablet {
+      display: block;
+      overflow: hidden;
+      transition: height 0.3s;
+    }
+  }
+}
